@@ -54,10 +54,13 @@ const editor = EditorJS({
 
 Link Tool supports these configuration parameters:
 
-| Field    | Type        | Description                                    |
-| ---------|-------------|------------------------------------------------|
-| endpoint | `string`    | **Required:** the endpoint for link data fetching. |
+| Field    | Type        | Description                                        |
+| ---------|-------------|----------------------------------------------------|
+| endpoint | `string`    | Endpoint for link data fetching.                   |
 | headers | `object`    | **Optional:** the headers used in the GET request. |
+| fetcher | `{{fetchLinkDataForUrl: function}}`    | Optional custom fetch function. See details below. |
+
+Note that if you don't implement your custom fetch method, the `endpoint` parameter is required.
 
 ## Output data
 
@@ -134,3 +137,6 @@ CodeX is a team of digital specialists around the world interested in building h
 | 🌐 | Join  👋  | Twitter | Instagram |
 | -- | -- | -- | -- |
 | [codex.so](https://codex.so) | [codex.so/join](https://codex.so/join) |[@codex_team](http://twitter.com/codex_team) | [@codex_team](http://instagram.com/codex_team/) |
+
+## Providing custom fetch method
+You have the option to provide your own custom fetch method. Use the `fetcher` config parameter with an object with a `fetchLinkDataForUrl` method that takes the url as a parameter and returns a Promise that resolves with response in the format described above.
