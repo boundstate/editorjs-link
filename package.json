@@ -1,6 +1,6 @@
 {
-  "name": "@editorjs/link",
-  "version": "2.6.2",
+  "name": "@boundstate/editorjs-link",
+  "version": "2.6.3",
   "keywords": [
     "codex editor",
     "tool",

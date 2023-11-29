@@ -17,16 +17,14 @@ Allows adding link previews to your articles.
 Get the package
 
 ```shell
-yarn add @editorjs/link
+yarn add @boundstate/editorjs-link
 ```
 
 Include module at your application
 
 ```javascript
-import LinkTool from '@editorjs/link';
+import LinkTool from '@boundstate/editorjs-link';
 ```
-
-Optionally, you can load this tool from CDN [JsDelivr CDN](https://cdn.jsdelivr.net/npm/@editorjs/link@latest)
 
 ## Usage
 
